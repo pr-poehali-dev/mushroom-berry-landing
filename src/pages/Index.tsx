@@ -9,9 +9,10 @@ const products = [
     id: 1,
     name: "Варенье из чёрных лисичек",
     desc: "Редкий деликатес — бережно собранные в кировских лесах лисички, томлёные по авторскому рецепту",
-    price: 450,
+    price: 799,
     emoji: "🍄",
     tag: "Хит продаж",
+    image: "https://cdn.poehali.dev/projects/071e3c4d-3264-4929-b5b1-c82e7521c464/bucket/f341fb6c-1b86-4b50-b89b-b8ed7cbf9aa7.jpg",
   },
   {
     id: 2,
@@ -344,10 +345,13 @@ export default function Index() {
                   style={{ backgroundColor: "#fff", borderColor: "var(--beige-dark)" }}
                 >
                   <div
-                    className="relative h-52 flex items-center justify-center"
+                    className="relative h-52 flex items-center justify-center overflow-hidden"
                     style={{ background: "linear-gradient(135deg, var(--beige) 0%, var(--beige-dark) 100%)" }}
                   >
-                    <span className="text-7xl select-none">{p.emoji}</span>
+                    {"image" in p && p.image
+                      ? <img src={p.image as string} alt={p.name} className="absolute inset-0 w-full h-full object-cover" />
+                      : <span className="text-7xl select-none">{p.emoji}</span>
+                    }
                     {p.tag && (
                       <div
                         className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold"
