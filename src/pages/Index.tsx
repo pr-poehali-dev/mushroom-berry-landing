@@ -18,9 +18,10 @@ const products = [
     id: 2,
     name: "Масло из белого гриба",
     desc: "Ароматное масло холодного настоя с белыми грибами. Превращает любое блюдо в шедевр",
-    price: 390,
+    price: 450,
     emoji: "🫙",
     tag: "Новинка",
+    image: "https://cdn.poehali.dev/projects/071e3c4d-3264-4929-b5b1-c82e7521c464/bucket/25dce574-ce98-4179-897a-77b9632802f4.jpg",
   },
   {
     id: 3,
