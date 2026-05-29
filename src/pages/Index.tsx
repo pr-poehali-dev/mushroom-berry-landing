@@ -663,7 +663,7 @@ export default function Index() {
                 <div className="space-y-5">
                   {[
                     { icon: "Phone", label: "Телефон", value: "+7 (951) 354-64-47", href: "tel:+79513546447" },
-                    { icon: "MessageSquare", label: "WhatsApp / Telegram", value: "@griby_da_yagody", href: null },
+
                     { icon: "MapPin", label: "Адрес", value: "г. Киров, ул. Альберта Лиханова д. 30", href: null },
                     { icon: "Clock", label: "Режим работы", value: "Ежедневно, 10:00–20:00", href: null },
                   ].map((c) => (
