@@ -177,12 +177,12 @@ export default function Index() {
               </svg>
             </a>
             <a
-              href="tel:+78332000000"
+              href="tel:+79513546447"
               className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-opacity hover:opacity-85"
               style={{ backgroundColor: "var(--terra)", color: "#fff" }}
             >
               <Icon name="Phone" size={14} />
-              +7 (8332) 00-00-00
+              +7 (951) 354-64-47
             </a>
           </div>
 
@@ -662,10 +662,10 @@ export default function Index() {
 
                 <div className="space-y-5">
                   {[
-                    { icon: "Phone", label: "Телефон", value: "+7 (8332) 00-00-00", href: "tel:+78332000000" },
+                    { icon: "Phone", label: "Телефон", value: "+7 (951) 354-64-47", href: "tel:+79513546447" },
                     { icon: "MessageSquare", label: "WhatsApp / Telegram", value: "@griby_da_yagody", href: null },
-                    { icon: "MapPin", label: "Город", value: "Киров, Кировская область", href: null },
-                    { icon: "Clock", label: "Режим работы", value: "Пн–Сб, 9:00–20:00", href: null },
+                    { icon: "MapPin", label: "Адрес", value: "г. Киров, ул. Альберта Лиханова д. 30", href: null },
+                    { icon: "Clock", label: "Режим работы", value: "Ежедневно, 10:00–20:00", href: null },
                   ].map((c) => (
                     <div key={c.label} className="flex items-start gap-4">
                       <div
@@ -828,8 +828,8 @@ export default function Index() {
           <p className="text-xs" style={{ color: "rgba(245,239,230,0.28)" }}>
             © 2024 · Киров · Авторские продукты из дикоросов
           </p>
-          <a href="tel:+78332000000" className="text-sm font-medium" style={{ color: "var(--terra-light)" }}>
-            +7 (8332) 00-00-00
+          <a href="tel:+79513546447" className="text-sm font-medium" style={{ color: "var(--terra-light)" }}>
+            +7 (951) 354-64-47
           </a>
         </div>
       </footer>
