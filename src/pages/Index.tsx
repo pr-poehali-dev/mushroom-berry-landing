@@ -163,14 +163,28 @@ export default function Index() {
             <a href="#contact" className="hover:opacity-60 transition-opacity">Контакты</a>
           </nav>
 
-          <a
-            href="tel:+78332000000"
-            className="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-opacity hover:opacity-85"
-            style={{ backgroundColor: "var(--terra)", color: "#fff" }}
-          >
-            <Icon name="Phone" size={14} />
-            +7 (8332) 00-00-00
-          </a>
+          <div className="hidden md:flex items-center gap-3">
+            <a
+              href="https://vk.com/gribdayagod"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-10 h-10 rounded-full transition-opacity hover:opacity-75"
+              style={{ backgroundColor: "var(--forest)", color: "var(--beige)" }}
+              title="ВКонтакте"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.862-.523-2.049-1.709-1.033-1.003-1.49-.9-1.49.525v1.184c0 .42-.132.524-1.202.524-1.77 0-3.732-1.073-5.11-3.073-2.075-2.923-2.645-5.107-2.645-5.575 0-.21.078-.407.288-.407h1.744c.426 0 .587.197.748.657.82 2.374 2.19 4.455 2.755 4.455.21 0 .31-.1.31-.645V9.978c-.065-1.16-.679-1.258-.679-1.67 0-.2.164-.407.427-.407h2.742c.36 0 .49.197.49.624v3.352c0 .36.164.49.263.49.21 0 .393-.13.786-.523 1.22-1.365 2.087-3.467 2.087-3.467.115-.243.31-.47.736-.47h1.744c.524 0 .638.27.524.636-.22.999-2.35 4.028-2.35 4.028-.186.306-.252.44 0 .78.186.25.8.77 1.21 1.24.753.85 1.33 1.56 1.487 2.05.147.492-.115.74-.607.74z"/>
+              </svg>
+            </a>
+            <a
+              href="tel:+78332000000"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-opacity hover:opacity-85"
+              style={{ backgroundColor: "var(--terra)", color: "#fff" }}
+            >
+              <Icon name="Phone" size={14} />
+              +7 (8332) 00-00-00
+            </a>
+          </div>
 
           <button
             className="md:hidden p-2"
@@ -648,10 +662,10 @@ export default function Index() {
 
                 <div className="space-y-5">
                   {[
-                    { icon: "Phone", label: "Телефон", value: "+7 (8332) 00-00-00" },
-                    { icon: "MessageSquare", label: "WhatsApp / Telegram", value: "@griby_da_yagody" },
-                    { icon: "MapPin", label: "Город", value: "Киров, Кировская область" },
-                    { icon: "Clock", label: "Режим работы", value: "Пн–Сб, 9:00–20:00" },
+                    { icon: "Phone", label: "Телефон", value: "+7 (8332) 00-00-00", href: "tel:+78332000000" },
+                    { icon: "MessageSquare", label: "WhatsApp / Telegram", value: "@griby_da_yagody", href: null },
+                    { icon: "MapPin", label: "Город", value: "Киров, Кировская область", href: null },
+                    { icon: "Clock", label: "Режим работы", value: "Пн–Сб, 9:00–20:00", href: null },
                   ].map((c) => (
                     <div key={c.label} className="flex items-start gap-4">
                       <div
@@ -662,10 +676,37 @@ export default function Index() {
                       </div>
                       <div>
                         <div className="text-xs mb-0.5" style={{ color: "rgba(245,239,230,0.45)" }}>{c.label}</div>
-                        <div className="text-sm font-medium" style={{ color: "var(--beige)" }}>{c.value}</div>
+                        {c.href
+                          ? <a href={c.href} className="text-sm font-medium hover:opacity-75 transition-opacity" style={{ color: "var(--beige)" }}>{c.value}</a>
+                          : <div className="text-sm font-medium" style={{ color: "var(--beige)" }}>{c.value}</div>
+                        }
                       </div>
                     </div>
                   ))}
+
+                  {/* ВКонтакте */}
+                  <div className="flex items-start gap-4">
+                    <div
+                      className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+                      style={{ backgroundColor: "rgba(245,239,230,0.07)" }}
+                    >
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style={{ color: "var(--terra-light)" }}>
+                        <path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.862-.523-2.049-1.709-1.033-1.003-1.49-.9-1.49.525v1.184c0 .42-.132.524-1.202.524-1.77 0-3.732-1.073-5.11-3.073-2.075-2.923-2.645-5.107-2.645-5.575 0-.21.078-.407.288-.407h1.744c.426 0 .587.197.748.657.82 2.374 2.19 4.455 2.755 4.455.21 0 .31-.1.31-.645V9.978c-.065-1.16-.679-1.258-.679-1.67 0-.2.164-.407.427-.407h2.742c.36 0 .49.197.49.624v3.352c0 .36.164.49.263.49.21 0 .393-.13.786-.523 1.22-1.365 2.087-3.467 2.087-3.467.115-.243.31-.47.736-.47h1.744c.524 0 .638.27.524.636-.22.999-2.35 4.028-2.35 4.028-.186.306-.252.44 0 .78.186.25.8.77 1.21 1.24.753.85 1.33 1.56 1.487 2.05.147.492-.115.74-.607.74z"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <div className="text-xs mb-0.5" style={{ color: "rgba(245,239,230,0.45)" }}>ВКонтакте</div>
+                      <a
+                        href="https://vk.com/gribdayagod"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm font-medium hover:opacity-75 transition-opacity"
+                        style={{ color: "var(--beige)" }}
+                      >
+                        vk.com/gribdayagod
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </Reveal>
