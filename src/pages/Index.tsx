@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import Icon from "@/components/ui/icon";
 
 const HERO_IMAGE = "https://cdn.poehali.dev/projects/071e3c4d-3264-4929-b5b1-c82e7521c464/files/2b6e7ac3-f8ba-4d81-84bb-62c9d6ff8be2.jpg";
+const LOGO = "https://cdn.poehali.dev/projects/071e3c4d-3264-4929-b5b1-c82e7521c464/bucket/44e33e96-5d42-470d-a661-982345dfbd3b.jpg";
 
 const products = [
   {
@@ -141,12 +142,12 @@ export default function Index() {
       >
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div
-              className="w-10 h-10 rounded-full flex items-center justify-center text-xl"
-              style={{ backgroundColor: "var(--forest)" }}
-            >
-              🍄
-            </div>
+            <img
+              src={LOGO}
+              alt="Грибы Да! Ягоды"
+              className="w-12 h-12 rounded-full object-cover"
+              style={{ border: "2px solid var(--beige-dark)" }}
+            />
             <div>
               <div className="font-display font-semibold text-lg leading-tight" style={{ color: "var(--forest)" }}>
                 Грибы Да! Ягоды
@@ -774,7 +775,11 @@ export default function Index() {
       >
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <span className="text-xl">🍄</span>
+            <img
+              src={LOGO}
+              alt="Грибы Да! Ягоды"
+              className="w-9 h-9 rounded-full object-cover opacity-80"
+            />
             <span className="font-display text-base font-semibold" style={{ color: "var(--beige)" }}>
               Грибы Да! Ягоды
             </span>
