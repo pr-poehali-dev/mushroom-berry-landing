@@ -350,7 +350,7 @@ export default function Index() {
                     style={{ background: "linear-gradient(135deg, var(--beige) 0%, var(--beige-dark) 100%)" }}
                   >
                     {"image" in p && p.image
-                      ? <img src={p.image as string} alt={p.name} className="absolute inset-0 w-full h-full object-cover" />
+                      ? <img src={p.image as string} alt={p.name} className="w-full h-full object-contain p-4" style={{ position: "relative", zIndex: 1 }} />
                       : <span className="text-7xl select-none">{p.emoji}</span>
                     }
                     {p.tag && (
