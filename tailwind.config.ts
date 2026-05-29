@@ -7,6 +7,7 @@ export default {
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
+			"./1780076385289413522.html"
 	],
 	prefix: "",
 	theme: {
@@ -17,8 +18,21 @@ export default {
 				'2xl': '1400px'
 			}
 		},
+		fontFamily: {
+			display: ['Cormorant', 'serif'],
+			body: ['Golos Text', 'sans-serif'],
+		},
 		extend: {
 			colors: {
+				forest: '#2C3B2D',
+				'forest-light': '#3D5440',
+				terra: '#B85C38',
+				'terra-light': '#D4714A',
+				beige: '#F5EFE6',
+				'beige-dark': '#EDE3D5',
+				cream: '#FAF7F2',
+				brand: '#1A1F1B',
+				gold: '#C49A3C',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -69,6 +83,10 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
+				'fade-up': {
+					from: { opacity: '0', transform: 'translateY(32px)' },
+					to: { opacity: '1', transform: 'translateY(0)' }
+				},
 				'accordion-down': {
 					from: {
 						height: '0'
