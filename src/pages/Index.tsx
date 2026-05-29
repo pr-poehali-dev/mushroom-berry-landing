@@ -346,11 +346,11 @@ export default function Index() {
                   style={{ backgroundColor: "#fff", borderColor: "var(--beige-dark)" }}
                 >
                   <div
-                    className="relative h-52 flex items-center justify-center overflow-hidden"
+                    className="relative h-64 flex items-center justify-center overflow-hidden"
                     style={{ background: "linear-gradient(135deg, var(--beige) 0%, var(--beige-dark) 100%)" }}
                   >
                     {"image" in p && p.image
-                      ? <img src={p.image as string} alt={p.name} className="w-full h-full object-contain p-4" style={{ position: "relative", zIndex: 1 }} />
+                      ? <img src={p.image as string} alt={p.name} className="absolute inset-0 w-full h-full object-cover object-center" />
                       : <span className="text-7xl select-none">{p.emoji}</span>
                     }
                     {p.tag && (
