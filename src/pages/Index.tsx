@@ -230,7 +230,7 @@ export default function Index() {
       <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
         <div
           className="absolute inset-0 bg-cover"
-          style={{ backgroundImage: `url(${JAM_IMAGE})`, backgroundPosition: "30% 55%" }}
+          style={{ backgroundImage: `url(${JAM_IMAGE})`, backgroundPosition: "30% 35%" }}
         />
         <div
           className="absolute inset-0"
