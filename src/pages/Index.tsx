@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import Icon from "@/components/ui/icon";
 
 const HERO_IMAGE = "https://cdn.poehali.dev/projects/071e3c4d-3264-4929-b5b1-c82e7521c464/files/2b6e7ac3-f8ba-4d81-84bb-62c9d6ff8be2.jpg";
+const JAM_IMAGE = "https://cdn.poehali.dev/projects/071e3c4d-3264-4929-b5b1-c82e7521c464/bucket/fc167105-0087-4dfc-bf0f-633907aca305.png";
 const LOGO = "https://cdn.poehali.dev/projects/071e3c4d-3264-4929-b5b1-c82e7521c464/bucket/44e33e96-5d42-470d-a661-982345dfbd3b.jpg";
 
 const products = [
@@ -236,12 +237,15 @@ export default function Index() {
         />
         <div
           className="absolute inset-0"
-          style={{ background: "linear-gradient(135deg, rgba(26,31,27,0.72) 0%, rgba(44,59,45,0.35) 100%)" }}
+          style={{ background: "linear-gradient(135deg, rgba(26,31,27,0.78) 0%, rgba(44,59,45,0.4) 100%)" }}
         />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-28 w-full">
-          <div className="max-w-2xl">
+          <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+
+            {/* LEFT — текст */}
             <div
+              className="flex-1 min-w-0"
               style={{
                 transition: "opacity 0.8s ease, transform 0.8s ease",
                 opacity: heroVisible ? 1 : 0,
@@ -273,7 +277,7 @@ export default function Index() {
                 Авторские продукты из кировских дикоросов. Никаких усилителей — только лес, любовь и семейные рецепты.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 mb-16">
                 <a
                   href="#products"
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-base font-semibold transition-all hover:opacity-90 hover:scale-[1.02]"
@@ -290,27 +294,45 @@ export default function Index() {
                   Заказать доставку
                 </a>
               </div>
+
+              <div
+                className="flex gap-10"
+                style={{
+                  transition: "opacity 0.8s ease 0.4s, transform 0.8s ease 0.4s",
+                  opacity: heroVisible ? 1 : 0,
+                  transform: heroVisible ? "translateY(0)" : "translateY(30px)",
+                }}
+              >
+                {[
+                  { num: "12+", label: "лет в лесу" },
+                  { num: "100%", label: "натуральный состав" },
+                  { num: "6", label: "авторских рецептов" },
+                ].map((s) => (
+                  <div key={s.label}>
+                    <div className="font-display text-3xl font-semibold" style={{ color: "var(--terra-light)" }}>{s.num}</div>
+                    <div className="text-xs mt-0.5" style={{ color: "rgba(245,239,230,0.55)" }}>{s.label}</div>
+                  </div>
+                ))}
+              </div>
             </div>
 
+            {/* RIGHT — фото варенья */}
             <div
-              className="mt-20 flex gap-10"
+              className="flex-shrink-0 w-full md:w-[480px] lg:w-[540px]"
               style={{
-                transition: "opacity 0.8s ease 0.4s, transform 0.8s ease 0.4s",
+                transition: "opacity 1s ease 0.2s, transform 1s ease 0.2s",
                 opacity: heroVisible ? 1 : 0,
-                transform: heroVisible ? "translateY(0)" : "translateY(30px)",
+                transform: heroVisible ? "translateY(0) scale(1)" : "translateY(30px) scale(0.96)",
               }}
             >
-              {[
-                { num: "12+", label: "лет в лесу" },
-                { num: "100%", label: "натуральный состав" },
-                { num: "6", label: "авторских рецептов" },
-              ].map((s) => (
-                <div key={s.label}>
-                  <div className="font-display text-3xl font-semibold" style={{ color: "var(--terra-light)" }}>{s.num}</div>
-                  <div className="text-xs mt-0.5" style={{ color: "rgba(245,239,230,0.55)" }}>{s.label}</div>
-                </div>
-              ))}
+              <img
+                src={JAM_IMAGE}
+                alt="Варенье из чёрных лисичек"
+                className="w-full h-auto object-contain drop-shadow-2xl"
+                style={{ filter: "drop-shadow(0 30px 60px rgba(0,0,0,0.5))" }}
+              />
             </div>
+
           </div>
         </div>
 
