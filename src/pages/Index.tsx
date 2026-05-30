@@ -229,12 +229,12 @@ export default function Index() {
       {/* HERO */}
       <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
         <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${JAM_IMAGE})` }}
+          className="absolute inset-0 bg-cover"
+          style={{ backgroundImage: `url(${JAM_IMAGE})`, backgroundPosition: "30% center" }}
         />
         <div
           className="absolute inset-0"
-          style={{ background: "linear-gradient(to right, rgba(10,16,11,0.18) 0%, rgba(10,16,11,0.72) 55%, rgba(10,16,11,0.88) 100%)" }}
+          style={{ background: "linear-gradient(to right, rgba(10,16,11,0.55) 0%, rgba(10,16,11,0.65) 45%, rgba(10,16,11,0.88) 100%)" }}
         />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-28 w-full">
