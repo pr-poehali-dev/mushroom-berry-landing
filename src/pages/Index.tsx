@@ -24,7 +24,7 @@ const products = [
     volume: "150 мл",
     emoji: "🫙",
     tag: "Новинка",
-    image: "https://cdn.poehali.dev/projects/071e3c4d-3264-4929-b5b1-c82e7521c464/bucket/25dce574-ce98-4179-897a-77b9632802f4.jpg",
+    image: "https://cdn.poehali.dev/projects/071e3c4d-3264-4929-b5b1-c82e7521c464/bucket/a724e89c-77f3-478d-9fe0-f75af21cae12.png",
   },
   {
     id: 3,
