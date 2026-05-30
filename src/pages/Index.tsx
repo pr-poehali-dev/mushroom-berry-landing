@@ -9,8 +9,9 @@ const products = [
   {
     id: 1,
     name: "Варенье из чёрных лисичек",
-    desc: "Редкий деликатес — бережно собранные в кировских лесах лисички, томлёные по авторскому рецепту",
+    desc: "Изысканный деликатес, который ценят в Европе. Сваренное на брусничном соке, с лёгкой кислинкой и лесным ароматом.",
     price: 799,
+    volume: "200 мл",
     emoji: "🍄",
     tag: "Хит продаж",
     image: "https://cdn.poehali.dev/projects/071e3c4d-3264-4929-b5b1-c82e7521c464/bucket/f341fb6c-1b86-4b50-b89b-b8ed7cbf9aa7.jpg",
@@ -369,7 +370,12 @@ export default function Index() {
                     >
                       {p.name}
                     </h3>
-                    <p className="text-sm leading-relaxed mb-5 flex-1" style={{ color: "#6B7C6E" }}>{p.desc}</p>
+                    <p className="text-sm leading-relaxed mb-3 flex-1" style={{ color: "#6B7C6E" }}>{p.desc}</p>
+                    {"volume" in p && p.volume && (
+                      <span className="inline-block text-xs font-medium px-2 py-0.5 rounded-full mb-4" style={{ backgroundColor: "var(--beige)", color: "var(--forest)" }}>
+                        {p.volume as string}
+                      </span>
+                    )}
 
                     <div className="flex items-center justify-between">
                       <span className="font-display text-2xl font-semibold" style={{ color: "var(--terra)" }}>
