@@ -230,22 +230,17 @@ export default function Index() {
       <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${HERO_IMAGE})`,
-            filter: "brightness(0.42) saturate(0.75)",
-          }}
+          style={{ backgroundImage: `url(${JAM_IMAGE})` }}
         />
         <div
           className="absolute inset-0"
-          style={{ background: "linear-gradient(135deg, rgba(26,31,27,0.78) 0%, rgba(44,59,45,0.4) 100%)" }}
+          style={{ background: "linear-gradient(to right, rgba(10,16,11,0.18) 0%, rgba(10,16,11,0.72) 55%, rgba(10,16,11,0.88) 100%)" }}
         />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-28 w-full">
-          <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
-
-            {/* LEFT — текст */}
+          <div className="flex justify-end">
             <div
-              className="flex-1 min-w-0"
+              className="w-full md:max-w-xl"
               style={{
                 transition: "opacity 0.8s ease, transform 0.8s ease",
                 opacity: heroVisible ? 1 : 0,
@@ -271,7 +266,7 @@ export default function Index() {
               </h1>
 
               <p
-                className="text-lg md:text-xl leading-relaxed mb-10 max-w-lg"
+                className="text-lg md:text-xl leading-relaxed mb-10"
                 style={{ color: "rgba(245,239,230,0.82)" }}
               >
                 Авторские продукты из кировских дикоросов. Никаких усилителей — только лес, любовь и семейные рецепты.
@@ -315,24 +310,6 @@ export default function Index() {
                 ))}
               </div>
             </div>
-
-            {/* RIGHT — фото варенья */}
-            <div
-              className="flex-shrink-0 w-full md:w-[480px] lg:w-[540px]"
-              style={{
-                transition: "opacity 1s ease 0.2s, transform 1s ease 0.2s",
-                opacity: heroVisible ? 1 : 0,
-                transform: heroVisible ? "translateY(0) scale(1)" : "translateY(30px) scale(0.96)",
-              }}
-            >
-              <img
-                src={JAM_IMAGE}
-                alt="Варенье из чёрных лисичек"
-                className="w-full h-auto object-contain drop-shadow-2xl"
-                style={{ filter: "drop-shadow(0 30px 60px rgba(0,0,0,0.5))" }}
-              />
-            </div>
-
           </div>
         </div>
 
