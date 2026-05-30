@@ -408,6 +408,12 @@ export default function Index() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <Reveal>
               <div>
+                <img
+                  src="https://cdn.poehali.dev/projects/071e3c4d-3264-4929-b5b1-c82e7521c464/bucket/5d76b821-9f20-41ee-855b-c52811e6ed66.jpg"
+                  alt="Семья Елизаровых"
+                  className="w-full rounded-2xl object-cover mb-8"
+                  style={{ maxHeight: "380px", objectPosition: "top" }}
+                />
                 <span className="deco-line" />
                 <p
                   className="text-xs font-semibold tracking-widest uppercase mt-4 mb-3"
